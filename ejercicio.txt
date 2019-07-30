@@ -1,0 +1,35 @@
+import random
+
+def carga_elementos(cantidad):
+    lista = []
+    contador = 0
+    while contador < cantidad:
+        n = random.randint(1,100)
+        #n = int(input("Ingrese un valor:"))
+        lista.append(n)
+        contador = contador +1
+    return lista
+
+def intercala_elementos(lista1, lista2):
+    contador = 0
+    contador2 = 0
+    largo_total = (len(lista1) - 1) + (len(lista2))
+    while contador <= largo_total:
+        if contador % 2 != 0 and contador2 <= len(lista2):            
+            lista1.insert(contador,lista2[contador2])
+            contador2 = contador2 + 1
+            
+        contador = contador + 1
+               
+    return lista1
+
+#Hola aca hay un comentario 
+
+
+cantidad = random.randint(0,10)
+lista1 = carga_elementos(1)
+print(lista1)
+lista2 = carga_elementos(3)
+print(lista2)
+intercala = intercala_elementos(lista1,lista2)
+print(intercala)
