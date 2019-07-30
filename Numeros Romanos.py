@@ -18,7 +18,7 @@ def numero_romano(valor):
         valor = unidades[unidad]
     return valor
 
-valor = random.randint(0,10000)
+valor = random.randint(0,999)
 print(valor)
 #valor = int(input("Ingrese un valor: "))
 valor = numero_romano(valor)
